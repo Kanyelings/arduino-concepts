@@ -13,7 +13,7 @@ void loop() {
   Serial.println(rate);
   rate = map(rate,200,800,minDuration,maxDuration);
   digitalWrite(ledPin, HIGH);
-  delay(rate);
+  delay(rate); // the rate at which
   digitalWrite(ledPin, LOW);
   delay(rate);
 
