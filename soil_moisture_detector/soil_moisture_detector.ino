@@ -1,18 +1,3 @@
-//Connect the Arduino to your computer using the USB cable. 
-//Open the Serial Monitor in your IDE to see the values from the 
-//sensor—this will also help you to calibrate your plant monitor. 
-//The IDE will display the value of the sensor’s reading. My value 
-//was 1000 with the sensor dry and not inserted in the soil, so I 
-//know this is the highest, and driest, value. To calibrate this value, 
-//turn the potentiometer on the controller clockwise to increase the 
-//resistance and counterclockwise to decrease it (see Figure 5-5).
- //When the sensor is inserted into moist soil, the value will 
-//drop to about 400. As the soil dries out, the sensor value rises; 
-//when it reaches 900, the LED will light and the buzzer will sound.
-
-
-
-
 const int moistureAO = 0;
  int AO = 0;       
 // Pin connected to A0 on the controller
@@ -29,7 +14,8 @@ const int moistureAO = 0;
  pinMode(LED, OUTPUT);     
 // Set pin as output
  }
- void loop () {
+ //Turn the potentiometer to calibrate your plant monitor.
+void loop () {
   tmp = analogRead( moistureAO );
  if ( tmp != AO ) {
     AO = tmp;
